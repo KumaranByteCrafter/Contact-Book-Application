@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Import Contacts{% endblock %}
+
+{% block content %}
+<div class="card p-4 mt-3">
+    <h3>Import Contacts</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="csv_file" class="form-control mb-3">
+        <button class="btn btn-primary">Import</button>
+    </form>
+</div>
+{% endblock %}
